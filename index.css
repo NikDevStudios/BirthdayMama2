@@ -1,6 +1,4 @@
-*{
-    
-}
+
 
 .scroller {
     max-width: ;
@@ -93,5 +91,12 @@
   /* for testing purposed to ensure the animation lined up correctly */
   .test {
     background: red !important;
+  }
+
+  @media (max-width: 768px) {
+    /* Disable animations for smaller screens */
+    .scroller[data-animated="true"] {
+      animation: none;
+    }
   }
   
