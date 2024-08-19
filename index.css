@@ -1,7 +1,5 @@
-
-
 .scroller {
-    max-width: ;
+    max-width: 600px;
   }
   
   .scroller__inner {
@@ -26,7 +24,7 @@
   .scroller[data-animated="true"] .scroller__inner {
     width: max-content;
     flex-wrap: nowrap;
-    animation: scroll var(--_animation-duration, 400s)
+    animation: scroll var(--_animation-duration, 40s)
       var(--_animation-direction, forwards) linear infinite;
   }
   
@@ -39,7 +37,7 @@
   }
   
   .scroller[data-speed="fast"] {
-    --_animation-duration: 25s;
+    --_animation-duration: 20s;
   }
   
   .scroller[data-speed="slow"] {
@@ -59,7 +57,7 @@
     --clr-primary-100: hsl(205, 15%, 58%);
     --clr-primary-400: hsl(215, 25%, 27%);
     --clr-primary-800: hsl(217, 33%, 17%);
-    --clr-primary-900: hsl(0, 0%, 100%);
+    --clr-primary-900: hsl(218, 33%, 9%);
   }
   
   html {
@@ -92,12 +90,4 @@
   .test {
     background: red !important;
   }
-
-  @media (max-width: 400px) {
-    /* Disable animations for smaller screens */
-    .scroller[data-animated="true"] {
-      animation: normal;
-    }
-  }
-  
   
