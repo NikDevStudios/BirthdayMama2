@@ -1,5 +1,5 @@
 .scroller {
-    max-width: 600px;
+    max-width: 350px;
   }
   
   .scroller__inner {
@@ -24,7 +24,7 @@
   .scroller[data-animated="true"] .scroller__inner {
     width: max-content;
     flex-wrap: nowrap;
-    animation: scroll var(--_animation-duration, 40s)
+    animation: scroll var(--_animation-duration, 400s)
       var(--_animation-direction, forwards) linear infinite;
   }
   
