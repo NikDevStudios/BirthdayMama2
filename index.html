@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <h1 style="text-align: center">Happy Birthday</h1>
+
+    <div  class="scroller" data-direction="left" data-speed="fast">
+        <div class="scroller__inner">
+            <img style="width: 100%; height: 300px;" src="BNSAE8191.JPG" alt="" />
+          <img style="width: 100%; height: 300px;" src="TVHFE6443.JPG" alt="" />
+          <img style="width: 100%; height: 300px;" src="IOGPE9288.JPG" alt="" />
+          <img style="width: 100%; height: 300px;" src="IMG_1488.JPG" alt="" />
+          <img style="width: 100%; height: 300px;" src="MFIIE1570.JPG" alt="" />
+          <img style="width: 100%; height: 300px;" src="IMG_2648.JPG" alt="" />
+        </div>
+
+<div class="scroller" data-direction="right" data-speed="fast">
+  <div class="scroller__inner">
+    <img style="width: 100%; height: 300px;" src="IMG_2612.JPG" alt="" />
+    <img style="width: 100%; height: 300px;" src="TEIO3864.JPG" alt="" />
+    <img style="width: 100%; height: 300px;" src="DUUJ0880.JPEG" alt="" />
+    <img style="width: 100%; height: 300px;" src="VKTF1242.JPEG" alt="" />
+    <img style="width: 100%; height: 300px;" src="CUOC0663.JPEG" alt="" />
+    <img style="width: 100%; height: 300px;" src="IMG_2798.JPG" alt="" />
+  </div>
+</div>
+
+<div>
+    <img style="width: 100%; height: 300px;" src="KSZCE1604.JPG">
+    <img>
+</div>
+</body>
+
+<footer>
+    <p></p>
+</footer>
+<script>
+const scrollers = document.querySelectorAll(".scroller");
+
+// If a user hasn't opted in for recuded motion, then we add the animation
+if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+  addAnimation();
+}
+
+function addAnimation() {
+  scrollers.forEach((scroller) => {
+    // add data-animated="true" to every `.scroller` on the page
+    scroller.setAttribute("data-animated", true);
+
+    // Make an array from the elements within `.scroller-inner`
+    const scrollerInner = scroller.querySelector(".scroller__inner");
+    const scrollerContent = Array.from(scrollerInner.children);
+
+    // For each item in the array, clone it
+    // add aria-hidden to it
+    // add it into the `.scroller-inner`
+    scrollerContent.forEach((item) => {
+      const duplicatedItem = item.cloneNode(true);
+      duplicatedItem.setAttribute("aria-hidden", true);
+      scrollerInner.appendChild(duplicatedItem);
+    });
+  });
+}
+
+  </script>
+</html>
